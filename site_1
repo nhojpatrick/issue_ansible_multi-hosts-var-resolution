@@ -1,0 +1,16 @@
+
+[app]
+site_1_app_1	ansible_connection=local
+
+[web]
+site_1_web_1	ansible_connection=local
+
+[site_1:children]
+web
+app
+
+[site_1:vars]
+site_name="site_1"
+
+[site:children]
+site_1
